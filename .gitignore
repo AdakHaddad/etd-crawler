@@ -1,12 +1,6 @@
-# Downloaded PDFs
 *.pdf
 downloads/
 har/
-
-# Python
 __pycache__/
-*.pyc
 venv/
-
-# Environment
 .env

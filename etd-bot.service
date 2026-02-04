@@ -1,0 +1,22 @@
+[Unit]
+Description=ETD UGM Crawler Telegram Bot
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=your_username
+Group=your_group
+WorkingDirectory=/path/to/your/bot/directory
+ExecStart=/usr/bin/python3 /path/to/your/bot/directory/run_bot_server.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Environment variables (optional)
+Environment=PYTHONPATH=/path/to/your/bot/directory
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
